@@ -65,7 +65,6 @@ Created on Fri Jan 26 22:22:14 2018
 # Gledi 7
 # Explanation 1
 
-# image
 
 # Arber has solved 2 questions.
 # Gledi has solved 7 questions.
