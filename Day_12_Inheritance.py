@@ -65,8 +65,6 @@ s = Student(firstName, lastName, idNum, scores)
 s.printPerson()
 print("Grade:", s.calculate())
 
-
-
 #Read from stdin the first line with student first name, last name and id 
 line = input().split()
 firstName = line[0]

@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jan 23 10:01:57 2018
-
-@author: toti.cavalcanti
-"""
-
-#https://www.hackerrank.com/challenges/30-2d-arrays/problem
-
 #!/bin/python3
 
 import sys

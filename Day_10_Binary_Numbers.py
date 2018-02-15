@@ -14,8 +14,7 @@ def decToBin(n):
         n = int(n / 2)
     return b[::-1]
     
-#n = int(input().strip())
-n = 524275
+n = int(input().strip())
 
 binary = decToBin(n)
 
