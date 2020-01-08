@@ -14,6 +14,7 @@ while True:
         arr = list(map(int, input().rstrip().split()))
         result = cutTheSticks(arr)
         print('\n'.join(map(str, result)))
+        print()
 
     except(EOFError):
         break
