@@ -26,7 +26,7 @@ def nonDivisibleSubset(k, s):
     # if even, can only have 1 value congruent to k/2 mod k
     if (k % 2 == 0):
         total += min(1, mods[k // 2])
-    # for all others, pick max of those k and n-k mod k
+    # for all others, pick max of those k and n - k mod k
     for i in range(1, (k + 1) // 2):
         total += max(mods[i], mods[k - i])
     return total
