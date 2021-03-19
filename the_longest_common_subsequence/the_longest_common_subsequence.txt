@@ -1,0 +1,59 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the longestCommonSubsequence function below.
+def longestCommonSubsequence(a, b):
+    a.insert(0, 0)
+    b.insert(0, 0)
+
+    rows = len(a)
+    cols = len(b)
+
+    table = [[0 for i in range(rows)] for y in range(cols)]
+   
+    for i in range(1, cols):
+        table[i][0] = b[i]
+    for j in range(1, rows):
+        table[0][j] = a[j]
+
+    for i in range(1, rows):
+        for j in range(1, cols):
+            if table[i - 1][j] == table[i][j - 1]:
+                table[i][j] = table[i-1][j-1] + 1
+            else:
+                table[i][j] = max(table[i-1][j], table[i][j-1])
+    print(table)
+#   i
+#j  0  1  2  3  4  5 
+#0 [0, 1, 2, 3, 4, 1], 
+#1 [3, 0, 0, 0, 0, 0], 
+#2 [4, 0, 0, 0, 0, 0], 
+#3 [1, 0, 0, 0, 0, 0], 
+#4 [2, 0, 0, 0, 0, 0], 
+#5 [1, 0, 0, 0, 0, 0], 
+#6 [3, 0, 0, 0, 0, 0]
+
+if __name__ == '__main__':
+
+    nm = input().split()
+
+    n = int(nm[0])
+
+    m = int(nm[1])
+
+    a = list(map(int, input().rstrip().split()))
+
+    b = list(map(int, input().rstrip().split()))
+    print(a)
+    print(b)
+    longestCommonSubsequence(a, b)
+
+    # fptr.write(' '.join(map(str, result)))
+    # fptr.write('\n')
+
+    # fptr.close()
